@@ -57,6 +57,10 @@ const ContactForm = () => {
       };
 
       // Use emailjs to email contact form data
+      console.log( import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_PUBLIC_KEY,)
       await emailjs.send(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
