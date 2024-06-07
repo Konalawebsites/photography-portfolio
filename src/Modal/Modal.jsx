@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
-import './modal.css';
 import { Box, Image, Stack } from 'grommet';
 
 const images = document.querySelectorAll(".photos img");
