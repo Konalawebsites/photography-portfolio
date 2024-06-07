@@ -1,8 +1,7 @@
-
 import Photos from './comps/Photos'
 import BottomBar from './comps/BottomBar'
-import './index.css'
 import { Box } from 'grommet'
+import './index.css'
 
 const photos1 = [
   {

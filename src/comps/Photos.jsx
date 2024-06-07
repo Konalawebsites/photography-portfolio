@@ -1,6 +1,7 @@
 import React from 'react';
-import Photos1 from '../../../kotisivut-frontend/src/Photos1';
+import Photos1 from './Photos1.jsx'
 import { CenteredContainer } from '../../styles/styles';
+import '../index.css'
 
 const Photos = ({ photos }) => {
     return (

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Modal from './components/Modal/Modal';
-import { Image } from 'grommet';
+import Modal from '../Modal/Modal';
+import { Box, Image } from 'grommet';
+import '../index.css'
 
 // const photoDisplay = Object.keys(photos).map((photo) => {
 //     return <img onClick={() => console.log("PERKELE")} key={photo} src={`${photos[photo].url}`} alt={`${photos[photo].image}`} />
