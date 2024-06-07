@@ -5,10 +5,10 @@ import '../fonts/font.css'
 export const customTheme = deepMerge(grommet, {
   global: {
     font: {
-      family: 'Arial',
-      size: '20px', // Adjust this value according to your requirements
+      family: 'Unispace',
+      size: '14px', // Adjust this value according to your requirements
       height: '20px', // Adjust this value according to your requirements
-      weight: 300, // Adjust this value according to your requirements
+      weight: 600, // Adjust this value according to your requirements
     },
 
     colors: {

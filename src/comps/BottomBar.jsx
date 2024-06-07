@@ -2,7 +2,7 @@ import React from "react"
 import { styled } from "styled-components"
 import { Box, Button, Layer, Text } from "grommet"
 import { StyledBottomBar } from "../../styles/styles"
-import { Chat } from 'grommet-icons'
+import { Emoji } from 'grommet-icons'
 import ContactForm from './ContactForm.jsx'
 
 const CustomText = styled(Text)`
@@ -15,17 +15,16 @@ const BottomBar = () => {
     const [open, setOpen] = React.useState(false);
     return (
         <StyledBottomBar>
-
             <Box direction="row" justify="between" width="100%">
-                <Box align="center" justify="center" margin={{ left: "4px" }}>
-                    <CustomText > Photography by Aleksi Tuominen</CustomText>
+                <Box align="center" justify="center" margin={{ left: "15px" }}>
+                    <CustomText > PhotoGraphy BY ALEKSI Tuominen </CustomText>
                 </Box>
 
                 <Box align="center" pad="small">
-                    <Button onClick={() => setOpen(!open)} icon={<Chat />} />
+                    <Button onClick={() => setOpen(!open)} icon={<Emoji />} />
                     {open && (
                         <Layer
-                            position="top"
+                        style={{ position: 'relative', top: '30%', width: "50%" }}
                             modal={false}
                             margin={{ vertical: 'medium', horizontal: 'small' }}
                             onEsc={() => setOpen(false)}
@@ -34,10 +33,10 @@ const BottomBar = () => {
                         >
                             <Box
                                 pad="medium"
-                                background="light-3"
+                                background="#333"
                                 round="small"
                                 elevation="small"
-                                style={{ position: 'relative', top: '-100%' }}
+                                style={{ position: 'relative', top: '50%' }}
                             >
                                 <ContactForm />
                             </Box>
