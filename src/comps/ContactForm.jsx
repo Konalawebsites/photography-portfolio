@@ -5,7 +5,7 @@ import { Button, Box, Form, TextArea, TextInput, Text } from 'grommet';
 import { styled } from 'styled-components';
 
 const CustomText = styled(Text)`
-  font-family: 'Weird';
+  font-family: 'Unispace';
   font-size: 24px;
   font-weight: bold;
 `;
@@ -92,7 +92,7 @@ const ContactForm = () => {
                 {/* Row 1 of form */}
                 <Box className='row formRow'>
                   <Box animation={animationProps} align='center'>
-                  <CustomText margin={{bottom: "15px"}}> ask about anything  </CustomText>
+                  <CustomText margin={{bottom: "15px"}}> say hi to my family </CustomText>
                   </Box>
                   <Box className='col-6'>
                     <TextInput

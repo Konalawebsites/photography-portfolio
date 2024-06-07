@@ -6,7 +6,7 @@ import { Emoji } from 'grommet-icons'
 import ContactForm from './ContactForm.jsx'
 
 const CustomText = styled(Text)`
-  font-family: 'Weird';
+  font-family: 'Unispace';
   font-size: 24px;
   font-weight: bold;
 `;
@@ -17,7 +17,7 @@ const BottomBar = () => {
         <StyledBottomBar>
             <Box direction="row" justify="between" width="100%">
                 <Box align="center" justify="center" margin={{ left: "15px" }}>
-                    <CustomText > PhotoGraphy BY ALEKSI Tuominen </CustomText>
+                    <CustomText> my photos </CustomText>
                 </Box>
 
                 <Box align="center" pad="small">
