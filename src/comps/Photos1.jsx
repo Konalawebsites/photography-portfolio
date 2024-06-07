@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import Modal from '../Modal/Modal';
-import { Box, Image } from 'grommet';
+import { Box, Grid, Image } from 'grommet';
 import '../index.css'
-
-// const photoDisplay = Object.keys(photos).map((photo) => {
-//     return <img onClick={() => console.log("PERKELE")} key={photo} src={`${photos[photo].url}`} alt={`${photos[photo].image}`} />
-// })
+import { CenterBox } from '../../styles/styles';
 
 const Photos1 = ({photos}) => {
     console.log(photos)
+    const columns = ['1fr', '1fr', '1fr'];
     const photoDisplay = Object.keys(photos).map((photo) => {
         return <Image onClick={() => {
             setImageUrl(photos[photo].url)
@@ -22,8 +20,12 @@ const Photos1 = ({photos}) => {
     return (
         <>
             {isModalOpen && <Modal imageUrl={imageUrl} setIsModalOpen={setIsModalOpen}/>}
-            <Box className='photos' >
+            <Box className='photos' width="auto">
+                <Grid 
+                columns={columns} gap="15px"> 
+                
                 {photoDisplay}
+                </Grid>
             </Box>
         </>
     )

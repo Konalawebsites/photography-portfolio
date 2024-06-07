@@ -2,6 +2,7 @@ import Photos from './comps/Photos'
 import BottomBar from './comps/BottomBar'
 import { Box } from 'grommet'
 import './index.css'
+import { CenterBox, CenteredContainer } from '../styles/styles'
 
 const photos1 = [
   {
@@ -52,10 +53,10 @@ const photos1 = [
 ]
 
 const App = () => (
-  <Box>
+  <CenteredContainer >
     <Photos photos={photos1} />
     <BottomBar />
-    </Box>
+    </CenteredContainer>
 )
 
 export default App

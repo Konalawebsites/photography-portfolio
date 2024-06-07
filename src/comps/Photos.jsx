@@ -5,7 +5,7 @@ import '../index.css'
 
 const Photos = ({ photos }) => {
     return (
-        <CenteredContainer >
+        <CenteredContainer display="grid">
             <Photos1 photos={photos}> </Photos1>
         </CenteredContainer>
     )

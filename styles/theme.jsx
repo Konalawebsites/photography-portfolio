@@ -44,23 +44,6 @@ export const customTheme = deepMerge(grommet, {
     },
   },
   layer: {
-    background: 'rgba(0, 0, 0, 0.7)',
-    modal: {
-      content: {
-        display: 'flex',
-        minHeight: '100vh',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-      },
-      border: {
-        color: 'rgba(0, 0, 0, 0.7)',
-        width: '5px',
-      },
-      background: '#ffffff', // Adjust this value according to your requirements
-      text: {
-        color: 'white', // Adjust this value according to your requirements
-      },
-    },
+    background: 'rgba(0, 0, 0, 0.7)'
   },
 });

@@ -2,9 +2,9 @@ import styled from "styled-components"
 import { Box } from "grommet"
 
 export const StyledBottomBar = styled(Box)`
-  position: fixed; /* Position the bar relative to the viewport */
+  position: relative; /* Position the bar relative to the viewport */
   bottom: 0; /* Align the bar to the bottom of the viewport */
-  margin-top: 200px;
+  margin-top: 10px;
   left: 0; /* Align the bar to the left of the viewport */
   width: 100%; /* Make the bar span the entire width of the viewport */
   background-color: #333; /* Example background color */
@@ -13,10 +13,9 @@ export const StyledBottomBar = styled(Box)`
 }`
 
 export const CenteredContainer = styled(Box)`
-display: flex;
 justify-content: center; /* Center horizontally */
 align-items: center; /* Center vertically */
-padding: medium;
+padding: small;
 margin-bottom: 10px;
 margin-top: 2px;
 `;

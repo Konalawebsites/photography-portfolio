@@ -11,7 +11,6 @@ const Modal = ({ imageUrl, setIsModalOpen }) => {
   return (
     <Box className='modal' onClick={() => setIsModalOpen(false)}>
       <Box className='modalContent' onClick={() => setIsModalOpen(false)}>
-       
           <Image className='close-btn' src='src/photos/close.png' alt="Close button" />
           <Image src={imageUrl} className='modalImg' onClick={() => setIsModalOpen(false)} />
           <Text className='modalTxt'>Image description or text</Text>
