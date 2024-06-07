@@ -1,14 +1,16 @@
 import { deepMerge } from 'grommet/utils';
-import { grommet } from 'grommet/themes';
+import { grommet } from 'grommet/themes'; 
+import '../fonts/font.css'
 
 export const customTheme = deepMerge(grommet, {
   global: {
     font: {
       family: 'Arial',
-      size: '18px', // Adjust this value according to your requirements
+      size: '20px', // Adjust this value according to your requirements
       height: '20px', // Adjust this value according to your requirements
-      weight: 800, // Adjust this value according to your requirements
+      weight: 300, // Adjust this value according to your requirements
     },
+
     colors: {
       brand: 'rgba(194, 124, 124, 0.87)', // Adjust this value according to your requirements
       background: '#242424',

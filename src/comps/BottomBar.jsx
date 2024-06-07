@@ -1,8 +1,15 @@
 import React from "react"
+import { styled } from "styled-components"
 import { Box, Button, Layer, Text } from "grommet"
 import { StyledBottomBar } from "../../styles/styles"
-import { Up } from 'grommet-icons'
+import { Chat } from 'grommet-icons'
 import ContactForm from './ContactForm.jsx'
+
+const CustomText = styled(Text)`
+  font-family: 'Weird';
+  font-size: 24px;
+  font-weight: bold;
+`;
 
 const BottomBar = () => {
     const [open, setOpen] = React.useState(false);
@@ -11,11 +18,11 @@ const BottomBar = () => {
 
             <Box direction="row" justify="between" width="100%">
                 <Box align="center" justify="center" margin={{ left: "4px" }}>
-                    <Text>Photography by Aleksi Tuominen</Text>
+                    <CustomText > Photography by Aleksi Tuominen</CustomText>
                 </Box>
 
-                <Box align="center" pad="medium">
-                    <Button onClick={() => setOpen(!open)} icon={<Up />} />
+                <Box align="center" pad="small">
+                    <Button onClick={() => setOpen(!open)} icon={<Chat />} />
                     {open && (
                         <Layer
                             position="top"

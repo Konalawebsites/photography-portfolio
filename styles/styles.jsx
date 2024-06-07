@@ -8,8 +8,9 @@ export const StyledBottomBar = styled(Box)`
   left: 0; /* Align the bar to the left of the viewport */
   width: 100%; /* Make the bar span the entire width of the viewport */
   background-color: #333; /* Example background color */
-  padding: 8px; /* Add some padding for spacing */
+  padding: 2px; /* Add some padding for spacing */
   color: #fff; /* Example text color */
+  height: "5px"
 }`
 
 export const CenteredContainer = styled(Box)`
