@@ -96,7 +96,7 @@ const ContactForm = () => {
                 {/* Row 1 of form */}
                 <Box className='row formRow'>
                   <Box animation={animationProps} align='center'>
-                  <CustomText margin={{bottom: "15px"}}> say hi to my family </CustomText>
+                  <CustomText margin={{bottom: "15px"}}> contact </CustomText>
                   </Box>
                   <Box className='col-6'>
                     <TextInput

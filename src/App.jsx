@@ -17,7 +17,7 @@ const photos1 = [
     id: 1,
   },
   {
-    url: '../images/1/horse.png',
+    url: '../images/1/torrediböle.png',
     image: '"volcano"',
     id: 2,
   },
