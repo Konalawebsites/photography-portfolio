@@ -22,7 +22,7 @@ const BottomBar = () => {
             <Box direction="row" justify="between" width="100%">
                 <Box align="center" justify="center" margin={{ left: "15px" }} direction="column" gap="1px">
                     <CustomText> my photos </CustomText>
-                    <CustomText2 margin={{left: "55px"}}> Aleksi Tuominen </CustomText2>
+                    <CustomText2 margin={{left: "55px"}}> Aleksi Tuominensss </CustomText2>
                 </Box>
 
                 <Box align="center" pad="small">
