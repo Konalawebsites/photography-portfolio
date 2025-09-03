@@ -1,7 +1,9 @@
-import projektorihuone from '/images/FP/hills.png';
-import koivu from '/images/FP/kukka.png';
-import torredibole from '/images/FP/volcano.png';
+import palmu from '/images/FP/palmu.jpg';
+import pyora from '/images/FP/pyora.jpg';
+import vuori from '/images/FP/vuori.jpg';
 import kukka from '/images/FP/masi.png';
+import sonni from '/images/FP/sonni.jpg';
+import auto from '/images/FP/auto.jpg';
 
 export const albums = {
   album1: Array.from({ length: 8 }, (_, i) => ({
@@ -57,8 +59,8 @@ export const albums = {
 };
 
 export const frontpageImages = [
-  { url: projektorihuone, title: 'Projektorihuone', id: 0 },
-  { url: koivu, title: 'Koivu', id: 1 },
-  { url: torredibole, title: 'Volcano', id: 2 },
+  { url: sonni, title: 'sonni', id: 0 },
+  { url: pyora, title: 'pyora', id: 1 },
+  { url: auto, title: 'auto', id: 2 },
   { url: kukka, title: 'Kukka', id: 3 },
 ];
