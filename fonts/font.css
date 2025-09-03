@@ -7,3 +7,8 @@
   font-family: 'Unispace';
   src: url('Unispace.otf') format('opentype'),
 }
+
+@font-face {
+  font-family: 'Grotesque';
+  src: url('Grotesque.ttf') format('opentype'),
+}
