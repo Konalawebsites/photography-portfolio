@@ -1,25 +1,26 @@
+// src/comps/PortfolioPage.jsx
 import React from "react";
 import { Box, Image, Text } from "grommet";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { slugify } from "./helpers/slugify";
 
 const AlbumBox = styled(Box)`
   margin: 10px;
   cursor: pointer;
-  flex: 1 1 22%; // ensures roughly 4 per row with some gap
+  flex: 1 1 22%;
   max-width: 250px;
+  text-decoration: none;
 
-  &:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
-  }
 `;
 
 const PortfolioPage = ({ albums }) => {
-  // Convert albums object into array of { id, name, coverUrl }
-  const albumArray = Object.entries(albums).map(([name, photos]) => ({
-    id: name,
-    name,
-    coverUrl: photos[0]?.url,
+  const albumArray = Object.entries(albums).map(([id, album]) => ({
+    id,
+    name: album.name,
+    year: album.year,
+    coverUrl: album.photos[0]?.url,
+    slug: slugify(album.name), // ✅ safe URL
   }));
 
   return (
@@ -29,11 +30,16 @@ const PortfolioPage = ({ albums }) => {
       justify="center"
       pad="large"
       gap="medium"
-      overflow="auto" // makes page scrollable if content exceeds viewport
-      style={{ minHeight: '100vh' }} // full viewport height
+      overflow="auto"
+      style={{ minHeight: "100vh" }}
     >
       {albumArray.map((album) => (
-        <AlbumBox key={album.id} align="center">
+        <AlbumBox
+          key={album.id}
+          align="center"
+          as={Link}
+          to={`/portfolio/${album.slug}`} // ✅ use slug
+        >
           <Image
             src={album.coverUrl}
             alt={album.name}
@@ -41,8 +47,22 @@ const PortfolioPage = ({ albums }) => {
             height="250px"
             fit="cover"
           />
-          <Text margin={{ top: "small" }} color="white" size="medium" textAlign="center">
-            {album.name}
+          <Text
+            margin={{ top: "small" }}
+            color="white"
+            size="medium"
+            textAlign="center"
+          >
+            {album.name},
+          </Text>
+          <Text> </Text>
+          <Text
+            color="white"
+            size="medium"
+            textAlign="center"
+          
+          >
+            {album.year}
           </Text>
         </AlbumBox>
       ))}
