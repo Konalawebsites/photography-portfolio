@@ -26,9 +26,9 @@ const AlbumPage = ({ albums }) => {
   const numPhotos = photos.length;
 
   return (
-    <Box pad="15px" gap="15px" style={{ minHeight: "100vh" }} margin={{bottom: "medium"}}>
+    <Box pad="15px" gap="15px" style={{ minHeight: "100vh" }} margin={{ bottom: "medium" }}>
       {/* Album details */}
-      <Box margin={{ left: "medium", bottom: "medium", top: "medium"}}>
+      <Box margin={{ left: "medium", bottom: "medium", top: "medium" }}>
         <Text size="xlarge" color="white" weight="bold">
           {album.name}
         </Text>
@@ -37,7 +37,7 @@ const AlbumPage = ({ albums }) => {
         </Text>
       </Box>
 
-      {/* existing photo layouts unchanged */}
+      {/* Layouts with lazy-loaded images */}
       {numPhotos === 2 && (
         <Box direction="row" pad="15px" gap="15px" justify="center">
           {photos.map((photo) => (
@@ -47,6 +47,7 @@ const AlbumPage = ({ albums }) => {
                 alt={photo.title}
                 fit="cover"
                 style={{ width: "100%", maxHeight: "350px", borderRadius: "6px" }}
+                loading="lazy"
               />
             </PhotoBox>
           ))}
@@ -61,6 +62,7 @@ const AlbumPage = ({ albums }) => {
               alt={photos[0].title}
               fit="cover"
               style={{ width: "100%", maxHeight: "300px", borderRadius: "6px" }}
+              loading="lazy"
             />
           </PhotoBox>
           <Box direction="row" gap="15px" justify="center">
@@ -71,6 +73,7 @@ const AlbumPage = ({ albums }) => {
                   alt={photo.title}
                   fit="cover"
                   style={{ width: "100%", maxHeight: "300px", borderRadius: "6px" }}
+                  loading="lazy"
                 />
               </PhotoBox>
             ))}
@@ -87,6 +90,7 @@ const AlbumPage = ({ albums }) => {
                 alt={photo.title}
                 fit="cover"
                 style={{ width: "100%", maxHeight: "300px", borderRadius: "6px" }}
+                loading="lazy"
               />
             </PhotoBox>
           ))}
@@ -102,6 +106,7 @@ const AlbumPage = ({ albums }) => {
                 alt={photo.title}
                 fit="cover"
                 style={{ width: "100%", maxHeight: "250px", borderRadius: "6px" }}
+                loading="lazy"
               />
             </PhotoBox>
           ))}
@@ -115,6 +120,7 @@ const AlbumPage = ({ albums }) => {
             alt={photos[0].title}
             fit="cover"
             style={{ width: "100%", maxHeight: "350px", borderRadius: "6px" }}
+            loading="lazy"
           />
         </PhotoBox>
       )}
