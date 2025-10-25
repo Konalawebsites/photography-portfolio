@@ -26,20 +26,48 @@ const AlbumPage = ({ albums }) => {
   const numPhotos = photos.length;
 
   return (
-    <Box pad="15px" gap="15px" style={{ minHeight: "100vh" }} margin={{ bottom: "medium" }}>
+    <Box
+      pad="15px"
+      gap="none"
+      style={{ minHeight: "100vh" }}
+      margin={{ bottom: "medium" }}
+    >
       {/* Album details */}
-      <Box margin={{ left: "medium", bottom: "medium", top: "medium" }}>
-        <Text size="xlarge" color="white" weight="bold">
+      <Box
+        direction="row"
+        align="center"
+        gap="small"
+        margin={{ left: "medium", top: "medium", bottom: "10px" }}
+      >
+        <Text size="large" color="white" weight="bold">
           {album.name}
         </Text>
-        <Text size="medium" color="white">
-          {album.year}
+        <Text size="medium" color="white" style={{ opacity: 0.8 }}>
+          — {album.year}
         </Text>
       </Box>
 
       {/* Layouts with lazy-loaded images */}
+      {numPhotos === 1 && (
+        <PhotoBox style={{ flex: "1 1 80%", paddingBottom: "50px" }}>
+          <Image
+            src={photos[0].url}
+            alt={photos[0].title}
+            fit="cover"
+            style={{ width: "100%", maxHeight: "350px", borderRadius: "6px" }}
+            loading="lazy"
+          />
+        </PhotoBox>
+      )}
+
       {numPhotos === 2 && (
-        <Box direction="row" pad="15px" gap="15px" justify="center">
+        <Box
+          direction="row"
+          pad="15px"
+          gap="15px"
+          justify="center"
+          style={{ paddingBottom: "50px" }} // ✅ space before bottom bar
+        >
           {photos.map((photo) => (
             <PhotoBox key={photo.id} style={{ flex: "1 1 45%" }}>
               <Image
@@ -55,7 +83,7 @@ const AlbumPage = ({ albums }) => {
       )}
 
       {numPhotos === 3 && (
-        <Box pad="15px" gap="15px">
+        <Box pad="15px" gap="15px" style={{ paddingBottom: "50px" }}>
           <PhotoBox>
             <Image
               src={photos[0].url}
@@ -72,7 +100,7 @@ const AlbumPage = ({ albums }) => {
                   src={photo.url}
                   alt={photo.title}
                   fit="cover"
-                  style={{ width: "100%", maxHeight: "300px", borderRadius: "6px" }}
+                  style={{ width: "100%", maxHeight: "600px", borderRadius: "0px" }}
                   loading="lazy"
                 />
               </PhotoBox>
@@ -82,14 +110,21 @@ const AlbumPage = ({ albums }) => {
       )}
 
       {numPhotos === 4 && (
-        <Box direction="row" wrap pad="15px" gap="15px" justify="center">
+        <Box
+          direction="row"
+          wrap
+          pad="15px"
+          gap="15px"
+          justify="center"
+          style={{ paddingBottom: "50px" }}
+        >
           {photos.map((photo) => (
             <PhotoBox key={photo.id} style={{ flex: "1 1 45%" }}>
               <Image
                 src={photo.url}
                 alt={photo.title}
                 fit="cover"
-                style={{ width: "100%", maxHeight: "300px", borderRadius: "6px" }}
+                style={{ width: "100%", maxHeight: "600px", borderRadius: "0px" }}
                 loading="lazy"
               />
             </PhotoBox>
@@ -98,31 +133,26 @@ const AlbumPage = ({ albums }) => {
       )}
 
       {numPhotos > 4 && (
-        <Box direction="row" wrap pad="15px" gap="15px" justify="center">
+        <Box
+          direction="row"
+          wrap
+          pad="15px"
+          gap="15px"
+          justify="center"
+          style={{ paddingBottom: "50px" }} // ✅ consistent bottom space
+        >
           {photos.map((photo) => (
             <PhotoBox key={photo.id} style={{ flex: "1 1 22%" }}>
               <Image
                 src={photo.url}
                 alt={photo.title}
                 fit="cover"
-                style={{ width: "100%", maxHeight: "250px", borderRadius: "6px" }}
+                style={{ width: "100%", maxHeight: "250px", borderRadius: "0px" }}
                 loading="lazy"
               />
             </PhotoBox>
           ))}
         </Box>
-      )}
-
-      {numPhotos === 1 && (
-        <PhotoBox style={{ flex: "1 1 80%" }}>
-          <Image
-            src={photos[0].url}
-            alt={photos[0].title}
-            fit="cover"
-            style={{ width: "100%", maxHeight: "350px", borderRadius: "6px" }}
-            loading="lazy"
-          />
-        </PhotoBox>
       )}
     </Box>
   );

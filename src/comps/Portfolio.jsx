@@ -11,17 +11,18 @@ const AlbumBox = styled(Box)`
   flex: 1 1 22%;
   max-width: 250px;
   text-decoration: none;
-
 `;
 
 const PortfolioPage = ({ albums }) => {
-  const albumArray = Object.entries(albums).map(([id, album]) => ({
-    id,
-    name: album.name,
-    year: album.year,
-    coverUrl: album.photos[0]?.url,
-    slug: slugify(album.name), // ✅ safe URL
-  }));
+  const albumArray = Object.entries(albums)
+    .map(([id, album]) => ({
+      id,
+      name: album.name,
+      year: album.year,
+      coverUrl: album.photos[0]?.url,
+      slug: slugify(album.name),
+    }))
+    .reverse(); // ✅ Reverse the array order
 
   return (
     <Box
@@ -38,7 +39,7 @@ const PortfolioPage = ({ albums }) => {
           key={album.id}
           align="center"
           as={Link}
-          to={`/portfolio/${album.slug}`} // ✅ use slug
+          to={`/portfolio/${album.slug}`}
         >
           <Image
             src={album.coverUrl}
@@ -55,13 +56,7 @@ const PortfolioPage = ({ albums }) => {
           >
             {album.name},
           </Text>
-          <Text> </Text>
-          <Text
-            color="white"
-            size="medium"
-            textAlign="center"
-          
-          >
+          <Text color="white" size="medium" textAlign="center">
             {album.year}
           </Text>
         </AlbumBox>
