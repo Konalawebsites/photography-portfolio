@@ -57,6 +57,7 @@ const PortfolioPage = ({ albums }) => {
             {album.name},
           </Text>
           <Text color="white" size="medium" textAlign="center">
+            <Text> </Text>
             {album.year}
           </Text>
         </AlbumBox>

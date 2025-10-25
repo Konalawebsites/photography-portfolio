@@ -20,11 +20,11 @@ export const albums = {
     })),
   },
   album3: {
-    name: "Fall",
+    name: "Fall..rocks and water",
     year: 2025,
-    photos: Array.from({ length: 4 }, (_, i) => ({
+    photos: Array.from({ length: 5 }, (_, i) => ({
       url: `/images/3/${i + 1}.jpg`,
-      title: `Crna Gora - Photo ${i + 1}`,
+      title: `Fall - Photo ${i + 1}`,
       id: i,
     })),
   },
